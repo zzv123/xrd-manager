@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xrd.znsbgl.mapper.LogMapper">
+
+	<insert id="addLog" parameterType="LoginLog">
+		insert into loginlog (adminid,logintime,ip) values (#{adminId},#{loginTime},#{ip})
+	</insert>
+
+	<select id="getAllLog" resultType="LoginLog">
+		select * from loginlog
+	</select>
+
+
+</mapper>

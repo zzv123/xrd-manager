@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>智能设备管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css/reg.css">
+</head>
+
+<body>
+<div id="ajax-hook"></div>
+<div class="wrap">
+    <div class="wpn">
+        <div class="form-data pos">
+            <a href=""><img src="./img/logo.png" class="head-logo"></a>
+            <div class="change-login">
+                <p class="account_number on">账号登录</p>
+                <p class="message">短信登录</p>
+            </div>
+            <div class="form1">
+                <p class="p-input pos">
+                    <label for="num">手机号/用户名/UID/邮箱</label>
+                    <input type="text" id="username">
+                    <span class="tel-warn num-err hide"><em>账号或密码错误，请重新输入</em><i class="icon-warn"></i></span>
+                </p>
+                <p class="p-input pos">
+                    <label for="pass">请输入密码</label>
+                    <input type="password" style="display:none"/>
+                    <input type="password" id="password" autocomplete="new-password">
+                    <span class="tel-warn pass-err hide"><em>账号或密码错误，请重新输入</em><i class="icon-warn"></i></span>
+                </p>
+               
+            </div>
+            <div class="form2 hide">
+                <p class="p-input pos">
+                    <label for="num2">手机号</label>
+                    <input type="number" id="num2">
+                    <span class="tel-warn num2-err hide"><em>账号或密码错误</em><i class="icon-warn"></i></span>
+                </p>
+                <p class="p-input pos">
+                    <label for="veri-code">输入验证码</label>
+                    <input type="number" id="veri-code">
+                    <a href="javascript:;" class="send">发送验证码</a>
+                    <span class="time hide"><em>120</em>s</span>
+                    <span class="tel-warn error hide">验证码错误</span>
+                </p>
+            </div>
+            <div class="r-forget cl">
+                <a href="./reg.html" class="z">账号注册</a>
+                <a href="./getpass.html" class="y">忘记密码</a>
+            </div>
+            <button class="lang-btn off log-btn" onclick="login()">登录</button>
+            <div class="third-party">
+                <a href="#" class="log-qq icon-qq-round"></a>
+                <a href="#" class="log-qq icon-weixin"></a>
+                <a href="#" class="log-qq icon-sina1"></a>
+            </div>
+            <p class="right">Powered by © 2018</p>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery.js"></script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+<script src="./js/agree.js"></script>
+<script src="./js/login.js"></script>
+<script src="./js/cookie.js"></script>
+
+
+
+<script type="text/javascript">
+
+
+function login(){
+    var un=document.getElementById("username").value;
+    var pw=$("#password").val();
+    // var returnCitySN = {"cip": "119.183.113.120", "cid": "371100", "cname": "山东省日照市"};
+    var ip=returnCitySN["cip"];
+
+    $.ajax({
+        url:"./login",
+        type:"get",
+        data:{
+            username:un,
+            password:pw,
+            ip:ip
+        },
+        dataType:"json",
+        success: function (data){
+            console.log(data);
+            if(data.code==1){
+                alert(data.msg);
+                $.cookie("token",data.token);
+                window.location.href="./index/index.html";
+
+
+            }else{
+                alert(data.msg);
+            }
+
+        }
+
+
+
+    })
+
+    // $.ajax({
+    //     url: '/path/to/file',
+    //     type: 'default GET (Other values: POST)',
+    //     dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+    //     data: {param1: 'value1'},
+    // })
+    
+    
+
+}
+
+
+    
+
+
+</script>
+
+</body>
+</html>

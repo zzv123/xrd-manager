@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xrd.znsbgl.mapper.EquipmentMapper">
+	<insert id="addEquipment" parameterType="Equipment" >
+		insert into equipment (name,person,brand,number) values (#{name},#{person},#{brand},#{number})
+	</insert>
+
+	<select id="getAllEquipment" resultType="Equipment">
+		select * from equipment
+	</select>
+
+
+	<select id="getEquipmentById" resultType="Equipment">
+		select * from equipment where id=#{id}
+	</select>
+
+	<update id="updateEquipmentById" parameterType="Equipment">
+		update equipment set name=#{name}, person=#{person},brand=#{brand},number=#{number} WHERE id = #{id}
+	</update>
+
+	<delete id="deleteEquipmentById" parameterType="int">
+		delete from equipment where id=#{id}
+	</delete>
+
+
+</mapper>
