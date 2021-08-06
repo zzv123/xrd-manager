@@ -41,6 +41,7 @@ body {
 }
 .leftMeun >div {
 	padding-left: 20px;
+	padding-right: 20px;
 }
 #rightContent {
 	/*position: absolute;*/
@@ -61,7 +62,6 @@ body {
 #logoDiv {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	height: 70px;
 	background-color: #354457;
 	font-size: 17px;
 	color: #fff;
