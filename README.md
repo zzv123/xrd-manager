@@ -40,3 +40,8 @@ github地址：https://github.com/zzv123/znsbgl
 [![4WCEWD.png](https://z3.ax1x.com/2021/09/28/4WCEWD.png)](https://imgtu.com/i/4WCEWD)
 [![4WCYlQ.png](https://z3.ax1x.com/2021/09/28/4WCYlQ.png)](https://imgtu.com/i/4WCYlQ)
 
+## 更新日志
+### 1.0.20210928.1
+1. 优化: 项目初始化
+2. 优化: 系统首页样式
+
