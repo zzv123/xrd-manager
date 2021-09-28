@@ -1,15 +1,42 @@
 # 星睿达智能设备管理系统
 
-- 运行环境:JDK 1.8
+## 项目介绍
 
-- maven: >=3.0
+星睿达智能设备管理系统
 
-- 数据库名:xrdznsbgl02
+## 项目地址
 
-- 数据库文件:xrdznsbgl02.sql
+运行地址：http://localhost:8424
 
-- 字符集:utf-8
+github地址：https://github.com/zzv123/znsbgl
 
-- 登录默认用户名:admin 密码:123456
+用户名：admin
 
+密码：123456
+
+## 技术栈
+
+### 前端
+1. HTML
+2. CSS
+3. JavaScript
+4. jQuery
+### 后端
+1. SpringBoot
+2. MySQL
+3. Mybatis
+
+## 项目搭建
+
+1. java版本：jdk1.8
+2. maven版本：maven3.0以上
+3. 数据库: MySQL8.0   
+3. 数据库名：xrdznsbgl02
+
+## 项目展示
+[![4Rvmsx.png](https://z3.ax1x.com/2021/09/28/4Rvmsx.png)](https://imgtu.com/i/4Rvmsx)
+[![4W9rMd.png](https://z3.ax1x.com/2021/09/28/4W9rMd.png)](https://imgtu.com/i/4W9rMd)
+[![4W9jWF.png](https://z3.ax1x.com/2021/09/28/4W9jWF.png)](https://imgtu.com/i/4W9jWF)
+[![4WCEWD.png](https://z3.ax1x.com/2021/09/28/4WCEWD.png)](https://imgtu.com/i/4WCEWD)
+[![4WCYlQ.png](https://z3.ax1x.com/2021/09/28/4WCYlQ.png)](https://imgtu.com/i/4WCYlQ)
 

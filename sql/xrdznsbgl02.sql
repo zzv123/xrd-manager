@@ -47,7 +47,7 @@ CREATE TABLE `equipment` (
 # Data for table "equipment"
 #
 
-INSERT INTO `equipment` VALUES (1,'111','111','111','223'),(2,'笔记本','张增威','联想','A'),(3,'手机','可达鸭','苹果','IPhone 11 pro max'),(4,'键盘','海燕','阿米洛','花旦娘');
+INSERT INTO `equipment` VALUES (1,'游戏鼠标','张增威','雷蛇','炼狱蝰蛇'),(2,'笔记本电脑','张增威','联想','拯救者Y7000P'),(3,'智能手机','可达鸭','苹果','iPhone 11 pro max'),(4,'机械键盘','海燕','阿米洛','花旦娘');
 
 #
 # Structure for table "loginlog"

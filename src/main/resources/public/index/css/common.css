@@ -60,12 +60,14 @@ body {
 /*左侧菜单栏*/
 
 #logoDiv {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	text-align: center;
+	height: 70px;
+	line-height: 70px;
 	background-color: #354457;
 	font-size: 17px;
 	color: #fff;
-	vertical-align: bottom;
+	padding-top: 20px;
+	font-weight: bold;
 }
 #logo {
 	height: 30px;
