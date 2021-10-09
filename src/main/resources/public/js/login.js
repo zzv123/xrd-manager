@@ -1,10 +1,3 @@
-/****************************************************************
- *																*		
- * 						      代码库							*
- *                        www.dmaku.com							*
- *       		  努力创建完善、持续更新插件以及模板			*
- * 																*
-****************************************************************/
 $(function(){
 	var tab = 'account_number';
 	// 选项卡切换
@@ -167,7 +160,6 @@ $(function(){
 			return true;
 		}
 	}
-
 	// 登录点击事件
 	function sendBtn(){
 		if (tab == 'account_number') {
@@ -265,15 +257,12 @@ $(function(){
 			});
 		}
 	}
-
 	// 登录的回车事件
 	$(window).keydown(function(event) {
     	if (event.keyCode == 13) {
     		$('.log-btn').trigger('click');
     	}
     });
-
-
 	$(".form-data").delegate(".send","click",function () {
 		var phone = $.trim($('#num2').val());
 		if (checkPhone(phone)) {
@@ -313,7 +302,4 @@ $(function(){
 	        },1000);
 		}
     });
-
-
-
 });

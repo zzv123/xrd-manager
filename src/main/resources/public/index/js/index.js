@@ -11,7 +11,6 @@ function getAllLog() {
             console.log(data);
             var html="";
             for(var i=0;i<data.data.length;i++){
-
                 data.data[i];
                 html+='<div class="row">'
                 html+='        <div class="col-xs-2 ">'
@@ -32,11 +31,7 @@ function getAllLog() {
                 html+='</div>'
 
             }
-
             $("#allLog").append(html);
-
-
-
         }
     })
 
@@ -173,8 +168,6 @@ function delete_equipmentById(id) {
             $("#equipment_list").empty();
             //再调用函数，重新异步加载并显示新数据
             getAllEquipment();
-
-
         }
     })
 

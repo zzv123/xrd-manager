@@ -64,7 +64,7 @@
     </div>
 </div>
 <script src="./js/jquery.js"></script>
-<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script src="./js/agree.js"></script>
 <script src="./js/login.js"></script>
 <script src="./js/cookie.js"></script>
@@ -75,11 +75,9 @@
 
 
 function login(){
-    var un=document.getElementById("username").value;
-    var pw=$("#password").val();
-    // var returnCitySN = {"cip": "119.183.113.120", "cid": "371100", "cname": "山东省日照市"};
-    // var ip=returnCitySN["cip"];
-    var ip="119.183.113.120";
+    let un = document.getElementById("username").value;
+    let pw=$("#password").val();
+    let ip="119.183.113.120";
 
     $.ajax({
         url:"./login",
@@ -96,27 +94,11 @@ function login(){
                 alert(data.msg);
                 $.cookie("token",data.token);
                 window.location.href="./index/index.html";
-
-
             }else{
                 alert(data.msg);
             }
-
         }
-
-
-
     })
-
-    // $.ajax({
-    //     url: '/path/to/file',
-    //     type: 'default GET (Other values: POST)',
-    //     dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-    //     data: {param1: 'value1'},
-    // })
-    
-    
-
 }
 
 
